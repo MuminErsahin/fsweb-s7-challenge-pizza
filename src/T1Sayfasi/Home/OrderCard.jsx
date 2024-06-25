@@ -13,7 +13,7 @@ const OrderCard = () => {
             <S.LargeTitle>Özel</S.LargeTitle>
             <S.LargeTitle>Lezzetusk</S.LargeTitle>
             <S.Description>Position:Absolute Acı Burger.</S.Description>
-            {/* Link ile "/orderpizza" sayfasına yönlendirme */}
+           
             <Link to="/orderpizza">
               <S.OrderButton>Sipariş Ver</S.OrderButton>
             </Link>
@@ -22,7 +22,7 @@ const OrderCard = () => {
             <S.MediumCard>
               <S.MediumTitle>Hackathlon</S.MediumTitle>
               <S.MediumTitle>Burger Menü</S.MediumTitle>
-              {/* Link ile "/orderpizza" sayfasına yönlendirme */}
+          
               <Link to="/orderpizza">
                 <S.OrderButton>Sipariş Ver</S.OrderButton>
               </Link>
@@ -33,7 +33,7 @@ const OrderCard = () => {
                 <S.SmallTitle>hızlı</S.SmallTitle>
               </S.Yanyana>
               <S.SmallTitle>npm gibi kurye</S.SmallTitle>
-              {/* Link ile "/orderpizza" sayfasına yönlendirme */}
+              
               <Link to="/orderpizza">
                 <S.OrderButton>Sipariş Ver</S.OrderButton>
               </Link>

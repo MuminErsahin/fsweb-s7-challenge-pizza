@@ -1,37 +1,42 @@
-import React, { useState } from 'react';
-import * as S from "./NoteStyle.js"
-import { Link } from 'react-router-dom/cjs/react-router-dom.min.js';
+import React, { useState } from "react";
+import * as S from "./NoteStyle.js";
+import {useHistory } from "react-router-dom/cjs/react-router-dom.min.js";
+import axios from "axios";
 
-
-
-
-
-const Note = ({checkTotalPrice,setTotalPriceValue}) => {
+const Note = ({sizeValue,pastryValue, choiseValue,totalPriceValue, checkTotalPrice, setTotalPriceValue }) => {
   const [quantity, setQuantity] = useState(1);
-
-  const price = 85.50;
-
+  const price = 85.5;
+  
   const handleIncrement = () => {
-    setQuantity(prevQuantity => prevQuantity + 1);
+    setQuantity((prevQuantity) => prevQuantity + 1);
   };
 
   const handleDecrement = () => {
     if (quantity > 1) {
-      setQuantity(prevQuantity => prevQuantity - 1);
+      setQuantity((prevQuantity) => prevQuantity - 1);
     }
   };
-
-  const totalPrice = (price * quantity) + checkTotalPrice;
-  setTotalPriceValue(totalPrice)
-    
-  
+  let history = useHistory();
+  const totalPrice = price * quantity + checkTotalPrice;
+  setTotalPriceValue(totalPrice);
+  const handlerSumbit = () => {
+    history.push("/success");
+    axios.post("https://reqres.in/api/pizza", 
+      {Size:sizeValue, Pastry:pastryValue, Materials:choiseValue, MaterialPrice:checkTotalPrice, TotalPrice: totalPriceValue}
+    ).then((res) => console.log("Veri gönderildi:", res.data))
+    .catch((err) => console.error("Hata oluştu:", err));
+  }
   return (
+    <>
+    
     <S.Container>
+      
       <S.QuantityContainer>
         <S.QuantityButton onClick={handleDecrement}>-</S.QuantityButton>
         <S.QuantityDisplay>{quantity}</S.QuantityDisplay>
         <S.QuantityButton onClick={handleIncrement}>+</S.QuantityButton>
       </S.QuantityContainer>
+      
       <S.PieceDiv>
         <S.ChoiseLabel>Sipariş Toplamı</S.ChoiseLabel>
         <S.ChoisedPrieceContainer>
@@ -39,14 +44,17 @@ const Note = ({checkTotalPrice,setTotalPriceValue}) => {
           <S.ChoisedPrieceValue>{checkTotalPrice}₺</S.ChoisedPrieceValue>
         </S.ChoisedPrieceContainer>
         <S.ChoisedPrieceContainer>
-          <S.ChoisedPrieceLabel PriceColor >Toplam Fiyat</S.ChoisedPrieceLabel>
-          <S.ChoisedPrieceValue PriceColor >{totalPrice}₺</S.ChoisedPrieceValue>
+          <S.ChoisedPrieceLabel PriceColor>Toplam Fiyat</S.ChoisedPrieceLabel>
+          <S.ChoisedPrieceValue PriceColor>{totalPrice}₺</S.ChoisedPrieceValue>
         </S.ChoisedPrieceContainer>
-        <Link to="/success">
-        <S.LastOrderButton>Sipariş Ver</S.LastOrderButton>
-        </Link>
+        
+          <S.LastOrderButton onClick={handlerSumbit}>
+            Sipariş Ver
+          </S.LastOrderButton>
+      
       </S.PieceDiv>
     </S.Container>
+    </>
   );
 };
 

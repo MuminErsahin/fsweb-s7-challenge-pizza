@@ -7,31 +7,68 @@ export const CheckBoxesLabelDiv = styled.div`
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 export const CheckedBoxLabel = styled.h2`
   font-size: 20px;
   font-family: "Barlow";
   margin-bottom: 15px;
   color: #292929;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    border-radius: 12px;
+    display: flex;
+  }
 `;
 export const CheckboxText = styled.p`
   font-size: 16px;
   color: #5f5f5f;
   font-family: "Barlow";
+  
 `;
 export const CheckboxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   max-width: 600px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+ font-size: 10x;
+    
+    
+    
+   
+  }
 `;
 
 export const LeftColumn = styled.div`
   flex: 1;
+  
+ 
 `;
 
 export const MiddleColumn = styled.div`
   flex: 1;
+  
+ 
 `;
 
 export const RightColumn = styled.div`
@@ -46,12 +83,40 @@ export const CheckboxLabel = styled.label`
   font-family: "Barlow";
   font-size: 16px;
   color: #5f5f5f;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const CheckboxInput = styled.input`
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    @media  (max-width: 768px) {
+      font-size: 14px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
 `;
 
 export const CustomCheckbox = styled.div`
@@ -85,15 +150,39 @@ export const InputDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
 `;
 export const Notes = styled.h2`
   font-family: "Barlow";
   font-size: 20px;
   display: flex;
   align-items: center;
-  margin-right: 510px;
+  
   margin-top:42px;
   margin-bottom:20px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+ color:black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 `;
 export const NoteInput = styled.input`
   background: #faf7f2;
@@ -105,6 +194,13 @@ export const NoteInput = styled.input`
   text-align: left; /* Adjust text alignment */
   margin-top: 10px; /* Adjust margin */
   line-height: 1.5; /* Adjust line height for vertical alignment */
+  @media (max-width: 768px) {
+ 
+    width:300px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const LineDiv = styled.div`

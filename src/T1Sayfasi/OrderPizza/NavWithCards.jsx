@@ -39,7 +39,9 @@ const NavWithCards = () => {
 
   return (
     <>
+      <S.NoneDiv>
       <HeadNav />
+      </S.NoneDiv>
       <OrderCard />
       <S.Container>
         <S.ContentContainer>

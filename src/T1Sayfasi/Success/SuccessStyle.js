@@ -8,6 +8,20 @@ export const Sarma = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    font-size: 14px; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
 `;
 
 export const Title = styled.img`
@@ -22,6 +36,17 @@ export const Mesage = styled.h1`
   line-height: 92px;
   font-weight: 300;
   margin-top: 15px;
+  @media (max-width: 768px) {
+    font-size: 54px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+  }
 `;
 export const SucHeader = styled.div`
   background: #ce2829;

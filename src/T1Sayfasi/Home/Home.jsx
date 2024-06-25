@@ -13,7 +13,9 @@ function Home() {
         <S.Motto>PİZZA,DOYURUR</S.Motto>
         <S.Button to="/orderpizza">ACIKTIM</S.Button>
       </S.Container>
-      <NavWithCards />
+   
+      <NavWithCards className="NavWithCards"/>
+  
     </>
   );
 }

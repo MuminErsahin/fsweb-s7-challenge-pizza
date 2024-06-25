@@ -8,11 +8,26 @@ export const HeaderContainer = styled.div`
   padding-bottom: 25px;
   padding-top: 10px;
   text-align: center; /* İçeriği ortala */
+  @media (max-width: 768px) {
+    background-color: #ce2829;
+  }
 `;
 
 export const Title = styled.img`
   margin-bottom: 30px;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    width: 300px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -23,6 +38,20 @@ export const NavContainer = styled.div`
   max-width: 600px;
   margin: 0 auto;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+    
+  }
 `;
 
 export const NavAnasayfa = styled(Link)`
@@ -31,6 +60,17 @@ export const NavAnasayfa = styled(Link)`
 
   margin: 0 10px;
   font-family: "Barlow";
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 
 export const NavOzet = styled(Link)`
@@ -38,6 +78,17 @@ export const NavOzet = styled(Link)`
   text-decoration: none;
   font-size: 17px;
   font-family: "Barlow";
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 
 export const ProductName = styled.h1`
@@ -49,10 +100,32 @@ export const ProductName = styled.h1`
   font-size: 22px;
   margin-top: 10px;
   color: #5f5f5f;
+  @media (max-width: 768px) {
+    
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 export const Onay = styled(Link)`
   background: #fdc913;
   color: black;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 export const PriceContainer = styled.div`
   margin-top: 20px;
@@ -64,12 +137,34 @@ export const PriceContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   background: #faf7f2;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 export const Price = styled.h3`
   font-family: "Barlow";
   font-size: 28px;
   color: #5f5f5f;
   background: #faf7f2;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #faf7f2;
+    border-radius: 12px;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -108,4 +203,12 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin: 0 auto;
+@media (max-width: 768px) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 `

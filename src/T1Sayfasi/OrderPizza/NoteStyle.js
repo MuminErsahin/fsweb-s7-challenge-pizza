@@ -8,12 +8,36 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 20px;
   height: 350px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
 `;
 
 export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  }
 `;
 
 export const QuantityButton = styled.button`
@@ -24,6 +48,20 @@ export const QuantityButton = styled.button`
   height: 50px;
   border-radius: 5px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
 `;
 
 export const QuantityDisplay = styled.span`
@@ -46,6 +84,9 @@ export const PieceDiv = styled.div`
   width: 386px;
   height: 197px;
   background: #faf7f2;
+  @media (max-width: 768px) {
+    margin-bottom:90px;
+  }
 `;
 
 export const ChoisedPrieceContainer = styled.div`
@@ -53,12 +94,16 @@ export const ChoisedPrieceContainer = styled.div`
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 10px;
+  @media (max-width: 768px) {
+    width:300px;
+  }
 `;
 export const ChoisedPrieceLabel = styled.h2`
   color: ${({ PriceColor }) => (PriceColor ? "#CE2829" : "#5f5f5f")};
   font-size: 18px;
   margin-left: 30px;
   font-family: "Barlow";
+  
 `;
 
 export const ChoisedPrieceValue = styled.h2`
@@ -90,3 +135,50 @@ export const ChoiseLabel = styled.h2`
   margin-left: 30px;
   font-family: "Barlow";
 `;
+export const NameTitle = styled.h2`
+  font-family: "Barlow";
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 510px;
+  margin-top:42px;
+  margin-bottom:20px;
+`
+export const NameInput = styled.input`
+  background: #faf7f2;
+  width: 602px;
+  height: 56px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: left; /* Adjust text alignment */
+  margin-top: 10px; /* Adjust margin */
+  line-height: 1.5;
+  `
+ export const NameSumbit = styled.button`
+  background-color: #fdc913;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  width: 386px;
+  height: 62px;
+  padding: 3px 18px 0px 18px;
+  border: none;
+  cursor: pointer;
+  font-family: "Barlow";
+  align-items: flex-end;
+  
+  `
+
+export const InputDiv = styled.div`
+margin-top: 20px;
+padding: 20px;
+background-color: #fff;
+
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`;
+

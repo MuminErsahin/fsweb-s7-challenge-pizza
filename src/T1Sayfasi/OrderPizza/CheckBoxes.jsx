@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import * as S from "./ChexkBoxesStyle.js";
 
-function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChoiseValue }) {
-  
+function CheckBoxes({ setAllValue, allValue, checkedItems, setCheckedItems, setCheckTotalPrice, setChoiseValue }) {
+  const [error, setError] = useState('');
 
   const options = [
     'Pepperoni', 'Tavuk Izgara', 'Mısır', 'Sarımsak',
@@ -17,6 +17,18 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
     setCheckedItems(newCheckedItems);
     setChoiseValue(Object.keys(newCheckedItems).filter(option => newCheckedItems[option]));
     calculateTotalPrice(newCheckedItems); // Checkbox değişikliğinde fiyatı tekrar hesapla
+    validateSelection(newCheckedItems); // Seçim validasyonunu çağır
+  };
+
+  const validateSelection = (items) => {
+    const minSelectionCount = 4;
+    const selectedCount = Object.values(items).filter(item => item).length;
+
+    if (selectedCount < minSelectionCount) {
+      setError(`En az ${minSelectionCount} malzeme seçmelisiniz.`);
+    } else {
+      setError('');
+    }
   };
 
   const calculateTotalPrice = (items) => {
@@ -29,7 +41,8 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
       }
     }
 
-    setCheckTotalPrice(totalPrice); // Toplam fiyatı state'e kaydet
+    setCheckTotalPrice(totalPrice);
+    console.log(checkedItems);
     return totalPrice;
   };
 
@@ -41,6 +54,7 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
 
   return (
     <div>
+      {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
       <S.CheckBoxesLabelDiv>
         <S.CheckedBoxLabel>Ek Malzemeler</S.CheckedBoxLabel>
         <S.CheckboxText>En Fazla 10 malzeme seçebilirsiniz.5₺</S.CheckboxText>
@@ -51,6 +65,7 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
             <S.CheckboxLabel key={index}>
               <S.CheckboxInput
                 type="checkbox"
+                value={option}
                 checked={checkedItems[option] || false}
                 onChange={() => handleCheckboxChange(option)}
               />
@@ -66,6 +81,7 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
             <S.CheckboxLabel key={index}>
               <S.CheckboxInput
                 type="checkbox"
+                value={option}
                 checked={checkedItems[option] || false}
                 onChange={() => handleCheckboxChange(option)}
               />
@@ -81,6 +97,7 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
             <S.CheckboxLabel key={index}>
               <S.CheckboxInput
                 type="checkbox"
+                value={option}
                 checked={checkedItems[option] || false}
                 onChange={() => handleCheckboxChange(option)}
               />
@@ -98,6 +115,7 @@ function CheckBoxes({checkedItems, setCheckedItems, setCheckTotalPrice, setChois
           type="text"
           placeholder="Siparişine eklemek istediğin bir not var mı?"
         />
+        
         <S.Line></S.Line>
       </S.InputDiv>
     </div>

@@ -11,10 +11,20 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media  (max-width: 768px) {
+   width: 100vw;
+   height: 100vh;
+    background-size: cover;
+    background-position:center ;
+  }
 `;
 
 export const Title = styled.img`
   margin-bottom: 10px;
+  @media  (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 export const Motto = styled.h1`
@@ -24,6 +34,9 @@ export const Motto = styled.h1`
   font-weight: 300;
   margin-top: 5px;
   margin-bottom: 5px;
+  @media  (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const Button = styled(Link)`
@@ -41,10 +54,17 @@ export const Button = styled(Link)`
   font-size: 18px;
   font-family: "Barlow";
   font-weight: 600;
+  @media  (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const Italic = styled.h2`
   font-family: "Satisfy";
   font-size: 32px;
   color: #fdc913;
   font-weight: 16;
+  @media  (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
+

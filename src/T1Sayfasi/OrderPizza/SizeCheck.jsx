@@ -51,12 +51,14 @@ const SizeCheck = ({setPastryValue , setSizeValue}) => {
         </S.SectionLabel>
         <S.DropdownSelect
           value={doughThickness}
+          name="Hamur Kalınlığı"
+          id="Hamur Kalınlığı"
           onChange={handleDoughThicknessChange}
           required
         >
-          <option value="">-Hamur Kalınlığı Seç-</option>
-          <option value="Süpper İnce ">Süpper İnce</option>
-          <option value="kalin">Kalın Hamur</option>
+          <option  name="Hamur Kalınlığı" value="">-Hamur Kalınlığı Seç-</option>
+          <option   name="Hamur Kalınlığı" value="Süpper İnce ">Süpper İnce</option>
+          <option  name="Hamur Kalınlığı" value="kalin">Kalın Hamur</option>
         </S.DropdownSelect>
       </S.Section>
     </S.SizeCheckContainer>

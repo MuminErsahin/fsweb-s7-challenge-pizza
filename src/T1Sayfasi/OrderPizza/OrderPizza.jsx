@@ -5,8 +5,22 @@ import Footer from "../Footer";
 import Note from "./Note";
 import * as S from "./OrderPizzaStyle.js";
 
-function OrderPizza({setTotalPriceValue, totalPriceValue,setCheckTotalPrice, checkTotalPrice, checkedItems, setCheckedItems, setChoiseValue, setPastryValue, setSizeValue }) {
-  ;
+function OrderPizza({
+  allValue,
+  setAllValue,
+  setTotalPriceValue,
+  totalPriceValue,
+  setCheckTotalPrice,
+  checkTotalPrice,
+  checkedItems,
+  setCheckedItems,
+  setChoiseValue,
+  setPastryValue,
+  setSizeValue,
+  sizeValue,
+  pastryValue,
+  choiseValue,
+}) {
   return (
     <S.Container>
       <S.HeaderContainer>
@@ -35,7 +49,12 @@ function OrderPizza({setTotalPriceValue, totalPriceValue,setCheckTotalPrice, che
           lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta denir.
         </S.Paragraph>
       </S.HeadNavStyle>
-      <SizeCheck setPastryValue={setPastryValue} setSizeValue={setSizeValue} />
+      <SizeCheck
+        setAllValue={setAllValue}
+        allValue={allValue}
+        setPastryValue={setPastryValue}
+        setSizeValue={setSizeValue}
+      />
 
       <CheckBoxes
         checkTotalPrice={checkTotalPrice}
@@ -44,8 +63,18 @@ function OrderPizza({setTotalPriceValue, totalPriceValue,setCheckTotalPrice, che
         checkedItems={checkedItems}
         setCheckedItems={setCheckedItems}
         totalPriceValue={totalPriceValue}
+        setAllValue={setAllValue}
+        allValue={allValue}
       />
-      <Note setTotalPriceValue={setTotalPriceValue} setCheckTotalPrice={setCheckTotalPrice} checkTotalPrice={checkTotalPrice} />
+      <Note
+        setTotalPriceValue={setTotalPriceValue}
+        setCheckTotalPrice={setCheckTotalPrice}
+        checkTotalPrice={checkTotalPrice}
+        sizeValue={sizeValue}
+        pastryValue={pastryValue}
+        choiseValue={choiseValue}
+        totalPriceValue={totalPriceValue}
+      />
       <Footer />
     </S.Container>
   );
