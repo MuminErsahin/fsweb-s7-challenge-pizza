@@ -20,6 +20,8 @@ function OrderPizza({
   sizeValue,
   pastryValue,
   choiseValue,
+  validation,
+  setValidation,
 }) {
   return (
     <S.Container>
@@ -65,6 +67,8 @@ function OrderPizza({
         totalPriceValue={totalPriceValue}
         setAllValue={setAllValue}
         allValue={allValue}
+        validation={validation}
+        setValidation={setValidation}
       />
       <Note
         setTotalPriceValue={setTotalPriceValue}
@@ -74,6 +78,7 @@ function OrderPizza({
         pastryValue={pastryValue}
         choiseValue={choiseValue}
         totalPriceValue={totalPriceValue}
+        validation={validation}
       />
       <Footer />
     </S.Container>

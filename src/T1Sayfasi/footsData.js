@@ -35,7 +35,7 @@ const foodsData = [
         image: "./Assets/mile2-aseets/pictures/food-1.png",
         rating: 4.9,
         numReviews: 200,
-        price: '60₺',
+        price: '70₺',
       },
       {
         title: 'Position Absolute Acı Pizza',

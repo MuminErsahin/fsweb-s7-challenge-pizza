@@ -1,36 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import * as S from "./ChexkBoxesStyle.js";
 
-function CheckBoxes({ setAllValue, allValue, checkedItems, setCheckedItems, setCheckTotalPrice, setChoiseValue }) {
-  const [error, setError] = useState('');
+function CheckBoxes({
+  validation,
+  setValidation,
+  checkedItems,
+  setCheckedItems,
+  setCheckTotalPrice,
+  setChoiseValue,
+}) {
+  const [error, setError] = useState("");
+  const [checkedCount, setCheckedCount] = useState(0); // State to track number of checked checkboxes
 
   const options = [
-    'Pepperoni', 'Tavuk Izgara', 'Mısır', 'Sarımsak',
-    'Ananas', 'Sosis', 'Soğan', 'Sucuk',
-    'Biber', 'Kabak', 'Kanada Jambonu', 'Domates',
-    'Jalepeno'
+    "Pepperoni",
+    "Tavuk Izgara",
+    "Mısır",
+    "Sarımsak",
+    "Ananas",
+    "Sosis",
+    "Soğan",
+    "Sucuk",
+    "Biber",
+    "Kabak",
+    "Kanada Jambonu",
+    "Domates",
+    "Jalepeno",
   ];
+
+  useEffect(() => {
+    
+    setValidation(checkedCount);
+    console.log("validation", validation);
+  }, [checkedCount, setValidation]);
 
   const handleCheckboxChange = (option) => {
     const newCheckedItems = { ...checkedItems };
     newCheckedItems[option] = !newCheckedItems[option];
     setCheckedItems(newCheckedItems);
-    setChoiseValue(Object.keys(newCheckedItems).filter(option => newCheckedItems[option]));
-    calculateTotalPrice(newCheckedItems); // Checkbox değişikliğinde fiyatı tekrar hesapla
-    validateSelection(newCheckedItems); // Seçim validasyonunu çağır
+    setChoiseValue(
+      Object.keys(newCheckedItems).filter((option) => newCheckedItems[option])
+    );
+    validateSelection(newCheckedItems); 
+   
   };
 
   const validateSelection = (items) => {
     const minSelectionCount = 4;
-    const selectedCount = Object.values(items).filter(item => item).length;
+    const maxSelectionCount = 10;
+    const selectedCount = Object.values(items).filter((item) => item).length;
+
+    setCheckedCount(selectedCount); // Update checkedCount state
 
     if (selectedCount < minSelectionCount) {
       setError(`En az ${minSelectionCount} malzeme seçmelisiniz.`);
+    } else if (selectedCount > maxSelectionCount) {
+      setError(`En fazla ${maxSelectionCount} malzeme seçebilirsiniz.`);
     } else {
-      setError('');
+      setError("");
     }
   };
 
+  // Calculate total price based on selected checkboxes
   const calculateTotalPrice = (items) => {
     const pricePerCheckbox = 5;
     let totalPrice = 0;
@@ -42,22 +73,26 @@ function CheckBoxes({ setAllValue, allValue, checkedItems, setCheckedItems, setC
     }
 
     setCheckTotalPrice(totalPrice);
-    console.log(checkedItems);
     return totalPrice;
   };
 
-  // Checkboxları sütunlara grupladım
+  // Divide options into three columns
   const optionsPerColumn = Math.ceil(options.length / 3);
   const leftColumnOptions = options.slice(0, optionsPerColumn);
-  const middleColumnOptions = options.slice(optionsPerColumn, 2 * optionsPerColumn);
+  const middleColumnOptions = options.slice(
+    optionsPerColumn,
+    2 * optionsPerColumn
+  );
   const rightColumnOptions = options.slice(2 * optionsPerColumn);
 
   return (
     <div>
-      {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
+      {error && (
+        <div style={{ color: "red", marginBottom: "10px" }}>{error}</div>
+      )}
       <S.CheckBoxesLabelDiv>
         <S.CheckedBoxLabel>Ek Malzemeler</S.CheckedBoxLabel>
-        <S.CheckboxText>En Fazla 10 malzeme seçebilirsiniz.5₺</S.CheckboxText>
+        <S.CheckboxText>En Fazla 10 malzeme seçebilirsiniz. 5₺</S.CheckboxText>
       </S.CheckBoxesLabelDiv>
       <S.CheckboxContainer>
         <S.LeftColumn>
@@ -115,8 +150,6 @@ function CheckBoxes({ setAllValue, allValue, checkedItems, setCheckedItems, setC
           type="text"
           placeholder="Siparişine eklemek istediğin bir not var mı?"
         />
-        
-        <S.Line></S.Line>
       </S.InputDiv>
     </div>
   );

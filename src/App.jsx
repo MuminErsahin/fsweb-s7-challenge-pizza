@@ -12,6 +12,7 @@ function App() {
   const [checkedItems, setCheckedItems] = useState({});
   const [checkTotalPrice, setCheckTotalPrice] = useState([]);
   const [totalPriceValue, setTotalPriceValue] = useState([]);
+  const [validation, setValidation] = useState(0)
   
   return (
     <>
@@ -22,6 +23,8 @@ function App() {
         <Route exact path="/orderpizza">
           
           <OrderPizza
+          validation={validation}
+          setValidation={setValidation}
             pastryValue={pastryValue}
             choiseValue={choiseValue}
             sizeValue={sizeValue}
