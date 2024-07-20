@@ -6,21 +6,21 @@ const foodsData = [
     items: [
       {
         title: 'Terminal Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-1.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-1.png",
         rating: 4.9,
         numReviews: 200,
         price: '60₺',
       },
       {
         title: 'Position Absolute Acı Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-2.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-2.png",
         rating: 4.9,
         numReviews: 928,
         price: '85₺',
       },
       {
         title: 'useEffect Tavuklu Burger',
-        image: "./Assets/mile2-aseets/pictures/food-3.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-3.png",
         rating: 4.9,
         numReviews: 462,
         price: '75₺',
@@ -32,21 +32,21 @@ const foodsData = [
     items: [
       {
         title: 'Terminal Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-1.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-1.png",
         rating: 4.9,
         numReviews: 200,
         price: '70₺',
       },
       {
         title: 'Position Absolute Acı Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-2.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-2.png",
         rating: 4.9,
         numReviews: 928,
         price: '85₺',
       },
       {
         title: 'useEffect Tavuklu Burger',
-        image: "./Assets/mile2-aseets/pictures/food-3.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-3.png",
         rating: 4.9,
         numReviews: 462,
         price: '75₺',
@@ -58,21 +58,21 @@ const foodsData = [
     items: [
       {
         title: 'Terminal Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-1.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-1.png",
         rating: 4.9,
         numReviews: 200,
         price: '60₺',
       },
       {
         title: 'Position Absolute Acı Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-2.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-2.png",
         rating: 4.9,
         numReviews: 928,
         price: '85₺',
       },
       {
         title: 'useEffect Tavuklu Burger',
-        image: "./Assets/mile2-aseets/pictures/food-3.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-3.png",
         rating: 4.9,
         numReviews: 462,
         price: '75₺',
@@ -84,21 +84,21 @@ const foodsData = [
     items: [
       {
         title: 'Terminal Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-1.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-1.png",
         rating: 4.9,
         numReviews: 200,
         price: '60₺',
       },
       {
         title: 'Position Absolute Acı Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-2.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-2.png",
         rating: 4.9,
         numReviews: 928,
         price: '85₺',
       },
       {
         title: 'useEffect Tavuklu Burger',
-        image: "./Assets/mile2-aseets/pictures/food-3.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-3.png",
         rating: 4.9,
         numReviews: 462,
         price: '75₺',
@@ -110,21 +110,21 @@ const foodsData = [
     items: [
       {
         title: 'Terminal Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-1.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-1.png",
         rating: 4.9,
         numReviews: 200,
         price: '60₺',
       },
       {
         title: 'Position Absolute Acı Pizza',
-        image: "./Assets/mile2-aseets/pictures/food-2.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-2.png",
         rating: 4.9,
         numReviews: 928,
         price: '85₺',
       },
       {
         title: 'useEffect Tavuklu Burger',
-        image: "./Assets/mile2-aseets/pictures/food-3.png",
+        image: "./public/Assets/mile2-aseets/pictures/food-3.png",
         rating: 4.9,
         numReviews: 462,
         price: '75₺',

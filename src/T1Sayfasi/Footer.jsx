@@ -18,19 +18,19 @@ function Footer() {
           
           <S.Address style={{ width: "360px", height: "263.56px" }}>
             <img
-              src="/Assets/mile2-aseets/footer/logo-footer.svg"
+              src="./public/Assets/mile2-aseets/footer/logo-footer.svg"
               style={{ width: "50%" }}
             />
             <S.AddressSpan>
-              <img src="./Assets/mile2-aseets/footer/icons/icon-1.png" />
+              <img src="./public/Assets/mile2-aseets/footer/icons/icon-1.png" />
               <p>341 Londonderry Road, Istanbul Türkiye</p>
             </S.AddressSpan>
             <S.AddressSpan>
-              <img src="./Assets/mile2-aseets/footer/icons/icon-2.png" />
+              <img src="./public/Assets/mile2-aseets/footer/icons/icon-2.png" />
               <p>aciktim@teknolojikyemekler.com</p>
             </S.AddressSpan>
             <S.AddressSpan>
-              <img src="./Assets/mile2-aseets/footer/icons/icon-3.png" />
+              <img src="./public/Assets/mile2-aseets/footer/icons/icon-3.png" />
               <p>+90 216 123 45 67</p>
             </S.AddressSpan>
           </S.Address>
@@ -58,12 +58,12 @@ function Footer() {
         <S.InstagramDiv style={{ width: "50%" }} className="instagram-div">
           <S.Instagram>
             <S.InstagramText>Instagram</S.InstagramText>
-            <S.InstagramImage src="./Assets/mile2-aseets/footer/insta/li-0.png" />
-            <S.InstagramImage src="./Assets/mile2-aseets/footer/insta/li-1.png" />
-            <S.InstagramImage src="./Assets/mile2-aseets/footer/insta/li-2.png" />
-            <S.InstagramImage src="./Assets/mile2-aseets/footer/insta/li-3.png" />
-            <S.InstagramImage src="./Assets/mile2-aseets/footer/insta/li-4.png" />
-            <S.InstagramImage src="./Assets/mile2-aseets/footer/insta/li-5.png" />
+            <S.InstagramImage src="./public/Assets/mile2-aseets/footer/insta/li-0.png" />
+            <S.InstagramImage src="./public/Assets/mile2-aseets/footer/insta/li-1.png" />
+            <S.InstagramImage src="./public/Assets/mile2-aseets/footer/insta/li-2.png" />
+            <S.InstagramImage src="./public/Assets/mile2-aseets/footer/insta/li-3.png" />
+            <S.InstagramImage src="./public/Assets/mile2-aseets/footer/insta/li-4.png" />
+            <S.InstagramImage src="./public/Assets/mile2-aseets/footer/insta/li-5.png" />
           </S.Instagram>
         </S.InstagramDiv>
       </S.FooterFirstDiv>
