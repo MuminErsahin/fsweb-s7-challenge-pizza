@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-  background: url("./public/Assets/mile2-aseets/home-bg.png");
+  background: url("./Assets/mile2-aseets/home-bg.png");
   width: 100%;
   height: 100vh;
   background-size: cover;

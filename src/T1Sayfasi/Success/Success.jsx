@@ -7,7 +7,7 @@ function Success({ totalPriceValue, checkTotalPrice, choiseValue, sizeValue, pas
     <>
       <div style={{ background: "#ce2829" }}>
         <S.SucHeader>
-          <S.Title src="./public/Assets/mile1-assets/logo.svg" />
+          <S.Title src="./Assets/mile1-assets/logo.svg" />
         </S.SucHeader>
         <S.Sarma>
           <S.Italic>lezzetin yolda</S.Italic>

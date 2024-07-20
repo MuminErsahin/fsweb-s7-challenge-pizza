@@ -26,10 +26,10 @@ function OrderPizza({
   return (
     <S.Container>
       <S.HeaderContainer>
-        <S.Title src="./public/Assets/mile1-assets/logo.svg" />
+        <S.Title src="./Assets/mile1-assets/logo.svg" />
       </S.HeaderContainer>
       <S.HeadNavStyle>
-        <S.HeadImg src="./public/Assets/mile2-aseets/pictures/form-banner.png" />
+        <S.HeadImg src="./Assets/mile2-aseets/pictures/form-banner.png" />
         <S.NavContainer>
           <S.NavAnasayfa to="/"> Ana Sayfa - </S.NavAnasayfa>
           <S.NavOzet to="/orderpizza"> Sipariş Özeti </S.NavOzet>

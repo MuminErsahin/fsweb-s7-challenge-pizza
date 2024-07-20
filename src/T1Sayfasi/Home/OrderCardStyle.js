@@ -36,7 +36,7 @@ export const CardContainer = styled.div`
 export const LargeCard = styled.div`
   width: 636px;
   height: 535.75px;
-  background-image: url('./public/Assets/mile2-aseets/cta/kart-1.png');
+  background-image: url('./Assets/mile2-aseets/cta/kart-1.png');
   background-size: cover;
   border-radius: 12px;
   display: flex;
@@ -78,7 +78,7 @@ export const MediumAndSmallCardsContainer = styled.div`
 export const MediumCard = styled.div`
   width: 636px;
   height: 255.53px;
-  background-image: url('./public/Assets/mile2-aseets/cta/kart-2.png');
+  background-image: url('./Assets/mile2-aseets/cta/kart-2.png');
   background-size: cover;
   border-radius: 12px;
   display: flex;
@@ -101,7 +101,7 @@ export const MediumCard = styled.div`
 export const SmallCard = styled.div`
   width: 660px;
   height: 230px;
-  background-image: url('./public/Assets/mile2-aseets/cta/kart-3.png');
+  background-image: url('./Assets/mile2-aseets/cta/kart-3.png');
   background-size: cover;
   border-radius: 12px;
   display: flex;
